@@ -12,7 +12,7 @@ var scrape = () => {
         $("article.item").each((i, element) => {
 
             var title = $(element).find("h2").children().text();
-            var url = $(element).find("a").attr("href");
+            var link = $(element).find("a").attr("href");
             var summary = $(element).find("p").text().trim();
 
             if (summary) {
@@ -21,7 +21,7 @@ var scrape = () => {
 
             var dataToAdd = {
                 title: title,
-                url: url,
+                link: link,
                 summary: summaryClean
             }
 

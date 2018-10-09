@@ -4,10 +4,10 @@ const db = require("../models");
 // Finds/creates/deletes note
 module.exports = {
     find: (req, res) => {
-        db.Note.find({ _articelId: req.params.id })
+        db.Note.find({ _articleId: req.params.id })
             .then((dbNote) => {
                 res.json(dbNote)
-            })
+            });
     },
     create: (req, res) => {
         db.Note.create(req.body)
