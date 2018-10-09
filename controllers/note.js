@@ -1,6 +1,7 @@
 // Import Models
 const db = require("../models");
 
+// Finds/creates/deletes note
 module.exports = {
     find: (req, res) => {
         db.Note.find({ _articelId: req.params.id })
@@ -20,4 +21,4 @@ module.exports = {
             res.json(dbNote)
         });
     }
-}
+};
