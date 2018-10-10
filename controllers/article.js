@@ -3,7 +3,9 @@ const db = require("../models");
 
 module.exports = {
     findAll: (req, res) => {
-        db.Article.find(req.query).sort({ date: -1 })
+        db.Article
+            .find(req.query)
+            .sort({ date: -1 })
             .then((dbArticle) => {
                 res.json(dbArticle)
             });

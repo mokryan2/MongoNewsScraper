@@ -14,7 +14,7 @@ const noteSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    note: String
+    noteText: String
 });
 
 // Create model based on noteSchema

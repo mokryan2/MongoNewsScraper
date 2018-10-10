@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
 // Create ArticleSchema
 const articleSchema = new Schema({
     // Title(String) of article is required(Need it!)
-    title: {
+    headline: {
         type: String,
         required: true
     },
@@ -17,7 +17,7 @@ const articleSchema = new Schema({
         required: true
     },
     // Link(String) is required(Need it!)
-    link: {
+    url: {
         type: String,
         required: true
     },
