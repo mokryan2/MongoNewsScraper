@@ -96,7 +96,7 @@ $(document).ready(function () {
             .data();
         $.get("/api/notes/" + currentArticle._id).then(function (data) {
             var modalText = $("<div class='container-fluid text-center'>").append(
-                $("<h4>").text("Notes For Article: " + currentArticle._id),
+                $("<h5>").text("Notes For Article: " + currentArticle._id),
                 $("<hr>"),
                 $("<ul class='list-group note-container'>"),
                 $("<textarea placeholder='New Note' rows='4' cols='60'>"),
@@ -121,7 +121,7 @@ $(document).ready(function () {
             .val()
             .trim();
         if (newNote) {
-            noteData = { _headlineId: $(this).data("article")._id, noteText: newNote };
+            noteData = { _articleId: $(this).data("article")._id, noteText: newNote };
             $.post("/api/notes", noteData).then(function () {
 
                 bootbox.hideAll();

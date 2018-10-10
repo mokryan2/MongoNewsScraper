@@ -12,9 +12,15 @@ body {
     background-image: url("../image/congruent_outline.png")
 }
 
-
+h4 {
+    color: white
+}
 
 h3 {
     font-size: 20px;
     line-height: 40px
+}
+
+.modal-content {
+    width: 125%;
 }
