@@ -83,7 +83,7 @@ $(document).ready(function () {
             .remove();
         $.ajax({
             method: "DELETE",
-            url: "/api/article/" + articleToDelete._id
+            url: "/api/articles/" + articleToDelete._id
         }).then(function (data) {
             if (data.ok) {
                 initPage();
